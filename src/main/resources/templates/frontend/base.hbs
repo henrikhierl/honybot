@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
+	{{#block "head"}}
+    	{{> frontend/head.hbs}}
+    {{/block}}
+    <body>
+        <div id="page-container" class="side-scroll header-navbar-fixed header-navbar-transparent">
+
+            <!-- Header -->
+            {{#block "header"}}
+            	{{> frontend/header.hbs}}
+            {{/block}}
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                {{#block "content"}}
+                	Test
+                {{/block}}
+            </main>
+            <!-- END Main Container -->
+
+            <!-- Footer -->
+            {{#block "footer"}}
+            	{{> frontend/footer.hbs}}
+            {{/block}}
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+        {{#block "javascript"}}
+        <script src="/assets/js/core/jquery.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="/assets/js/core/jquery.appear.min.js"></script>
+        <script src="/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="/assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="/assets/js/core/js.cookie.min.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <!-- Page JS Code -->
+        <script>
+            jQuery(function () {
+                // Init page helpers (Appear + CountTo plugins)
+                App.initHelpers(['appear', 'appear-countTo']);
+            });
+        </script>
+		{{/block}}
+		
+		
+    </body>
+</html>

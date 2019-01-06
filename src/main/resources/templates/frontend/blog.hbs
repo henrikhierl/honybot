@@ -1,0 +1,329 @@
+ {{#partial "content"}}
+<!-- Hero Content -->
+<div class="bg-image"
+	style="background-image: url('http://images.honybot.com/blog/rewards/background1.jpg');">
+	<div class="bg-primary-op">
+		<section class="content content-full content-boxed overflow-hidden">
+			<!-- Section Content -->
+			<div class="push-100-t push-100 text-center">
+				<h1 class="text-white push-10">Honyblog</h1>
+				<h2 class="h3 text-white-op">updates - features - news</h2>
+			</div>
+			<!-- END Section Content -->
+		</section>
+	</div>
+</div>
+<!-- END Hero Content -->
+
+<!-- Story Content -->
+<div class="bg-white">
+<section class="content content-boxed">
+		<!-- Section Content -->
+		<div class="text-center"><h4>October 25, 2017</h4></div>
+		<div class="row push-50-t push-50 nice-copy-story">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<h2 class="font-w400 text-black push-20-t push-20">Bet Templates are here!</h2>
+				<p>
+					As we announced last week, we have a completely overhauled betting system, which allows us to bring bet templates to you! 
+					You can create your own templates selecting from 2 different types:
+				</p>
+				<ul>
+					<li>
+						Bet with multiple <strong>options</strong>
+					</li>
+					<li>
+						<strong>Estimation</strong> bet
+					</li>
+				</ul>
+				<p></p>
+				<h3>Option Bet</h3>
+				<p>
+					Create a bet with <strong>multiple options</strong> users can choose form. Each options has is own <strong>quota</strong> and a (small) description.
+				</p>
+				
+				<div class="content-grid">
+					<div class="row js-gallery">
+						<div class="col-xs-12">
+							<a class="img-link"
+								href="http://images.honybot.com/blog/templates/option.png"> <img
+								class="img-responsive"
+								src="http://images.honybot.com/blog/templates/option.png" alt=""
+								style="border: #e2e2e2 solid 1px">
+							</a>
+						</div>
+					</div>
+				</div>
+				<h3>Estimation Bet</h3>
+				<p>
+					Create a bet where users will <strong>estimate the outcome</strong>. You can set the winners to be an <strong>absolute</strong> amount of betters (e.g. 3) or a <strong>percentage</strong> of 
+					betters (e.g. 0.33 = 33%). The winner with the worst estimate will get the <strong>base quota</strong> (e.g. of 1.8), while the quota will <strong>increase</strong> (e.g. by 0.1) 
+					the closer the estimate is to the outcome. For a detailed example, check <a href="#1710">last weeks post</a>.
+				</p>
+				<div class="content-grid">
+					<div class="row js-gallery">
+						<div class="col-xs-12">
+							<a class="img-link"
+								href="http://images.honybot.com/blog/templates/estimation.png"> <img
+								class="img-responsive"
+								src="http://images.honybot.com/blog/templates/estimation.png" alt=""
+								style="border: #e2e2e2 solid 1px">
+							</a>
+						</div>
+					</div>
+				</div>
+				<h3>Resolving A Bet</h3>
+				<p>
+					To end a bet you just use the commadn !endbet [option] and !endbet [value] respectively.
+				</p>
+				<p>
+					If you ideas for more types of templates just hit us up <a href="https://twitter.com/Honybot">@Honybot</a> and we will look into implementing them.
+					 We hope that you like this new feature and are looking forward to turn even more of your viewers into happy gamblers :)
+				</p>
+
+				<h4>- Holly</h4>
+
+
+			</div>
+		</div>
+		<!-- END Section Content -->
+	</section>
+	<section class="content content-boxed">
+		<hr>
+		<!-- Section Content -->
+		<div class="text-center" id="1710"><h4>October 17, 2017</h4></div>
+		<div class="row push-50-t push-50 nice-copy-story">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<h2 class="font-w400 text-black push-20-t push-20">Preperations for new betting system<br><small>Also: Player Unknown's Battlegrounds</small></h2>
+				<p>
+					In preperations for our new betting system which we hope to roll out at the end of this week,
+					we are releasing a small update for bets. Only a few minor things will change for now:
+				</p>
+				<ul>
+					<li>
+						<strong>!bet [option] [amount]</strong> will <strong>not</strong> work anymore
+					</li>
+					<li>
+						<strong>!bet [amount] [option]</strong> will be the correct way to bet
+					</li>
+					<li>
+						<strong>!startbet pubg</strong> is a new betting type
+					</li>
+				</ul>
+
+				<p>
+					More detailed information about all this will follow with the full release at the end of this week. But here is how PUGB bets work:
+				</p>
+				
+				<p>
+					If you start a bet for PUGB using <strong>!startbet pubg</strong>, users will be able to bet on any number value they want (!bet [amount] [place]), 
+					to take a guess on which place you will finish the game. If you died (or won the game) you can end the bet with <strong>!endbet [place]</strong> (e.g. !endbet 10).
+					Currently the best <strong>33%</strong> of users who participated in betting will be chosen as winners (all of this will be customizable in the future of course).
+					The user who is the <strong>furthest</strong> away from the correct palce (but still a winner of course) will get a quota of <strong>1.8</strong>, 
+					the second worst a quota of <strong>1.9</strong>, ... <strong>increasing by 0.1</strong> the better they are. 
+				</p>
+				
+				<h3>Example - Finshed Rank Is 10</h3>
+				
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>User</th>
+							<th>Bet on place</th>
+							<th>Distance</th>
+							<th>Rank</th>
+							<th>Quota</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cheeser</td>
+							<td>67</td>
+							<td>57</td>
+							<td>9</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>KillerQueen</td>
+							<td>95</td>
+							<td>85</td>
+							<td>10</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Holly</td>
+							<td>10</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1.9</td>
+						</tr>
+						<tr>
+							<td>Bert</td>
+							<td>7</td>
+							<td>3</td>
+							<td>4</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Gunni</td>
+							<td>25</td>
+							<td>15</td>
+							<td>6</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Pete</td>
+							<td>9</td>
+							<td>1</td>
+							<td>2</td>
+							<td>1.8</td>
+						</tr>
+						<tr>
+							<td>TheDestroyerxX</td>
+							<td>9</td>
+							<td>1</td>
+							<td>2</td>
+							<td>1.8</td>
+						</tr>
+						<tr>
+							<td>asdf</td>
+							<td>1</td>
+							<td>9</td>
+							<td>5</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Treb</td>
+							<td>66</td>
+							<td>56</td>
+							<td>8</td>
+							<td>-</td>
+						</tr>
+						<tr>
+							<td>Slayer</td>
+							<td>35</td>
+							<td>25</td>
+							<td>7</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p>
+					(<em>There currently is a bug when (e.g.) top 3 betters are winners but place 3 and 4 guessed the same place. One of them will be "randomly" selected as winner.
+					This will be fixed in the next version</em>)
+				</p>
+				
+				<p>
+					We hope you like our new additions and we look forward to this weeks major update. We wanted to put these changes out as soon as possible since betting for PUBG was a heavily requested feature.
+					If you find any <strong>bugs</strong>, let us know <a href="https://twitter.com/Honybot">@Honybot</a> or <a href="https://twitter.com/HollySC2">@HollySC2</a>.
+				</p>
+				
+				<p>So far</p>
+
+				<h4>- Holly</h4>
+
+
+			</div>
+		</div>
+		<!-- END Section Content -->
+	</section>
+	<section class="content content-boxed">
+	<hr>
+		<!-- Section Content -->
+		<div class="text-center"><h4>September 24, 2017</h4></div>
+		<div class="row push-50-t push-50 nice-copy-story">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<h2 class="font-w400 text-black push-20-t push-20">Introducing Rewards</h2>
+				<p>It has been possible for quite a while now, that streamers
+					could create custom commands which users had to pay points for to
+					use. This feature has been used as a workaround to creating rewards
+					like challenging the streamer to a round of starcraft or for a
+					chill game of 2v2 together.</p>
+				<p>
+					The biggest <strong>problem</strong> with this approach was that
+					streamers could lose track of who used the command, which is now <strong>solved</strong>
+					with <strong>REWARDS</strong>.
+				<p>
+				<div class="content-grid">
+					<div class="row js-gallery">
+						<div class="col-xs-12">
+							<a class="img-link"
+								href="http://images.honybot.com/blog/rewards/create.jpg"> <img
+								class="img-responsive"
+								src="http://images.honybot.com/blog/rewards/create.jpg" alt=""
+								style="border: #e2e2e2 solid 1px">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>Streamers can create and update custom rewards which can then
+					be redeemed by viewers. A reward has the following properties:
+				</p>
+				
+				<ul>
+					<li><strong>Title</strong></li>
+					<li><strong>Command</strong> - used in chat by a viewer to
+						redeem the reward</li>
+					<li><strong>Response</strong> - used to give feedback to the
+						viewer in chat</li>
+					<li><strong>Icon</strong></li>
+					<li><strong>Description</strong></li>
+					<li><strong>Cost</strong></li>
+					<li><strong>Required VIP Level</strong></li>
+				</ul>
+
+				<p>
+					Redeemed rewards are listed with all important information. Streamers can
+					delete redeemed rewards they have fulfilled. A viewer can also add
+					a <strong>comment</strong> by simply typing a message after the
+					command.
+				</p>
+
+				<div class="content-grid">
+					<div class="row js-gallery">
+						<div class="col-xs-12">
+							<a class="img-link"
+								href="http://images.honybot.com/blog/rewards/redeems.jpg"> <img
+								class="img-responsive"
+								src="http://images.honybot.com/blog/rewards/redeems.jpg" alt=""
+								style="border: #e2e2e2 solid 1px">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<p>
+					A streamers page now has an additional <strong>rewards
+						section</strong> so your viewers know exactly which rewards exist.
+				</p>
+
+				<div class="content-grid">
+					<div class="row js-gallery">
+						<div class="col-xs-12">
+							<a class="img-link"
+								href="http://images.honybot.com/blog/rewards/rewards_overview.jpg">
+								<img class="img-responsive"
+								src="http://images.honybot.com/blog/rewards/rewards_overview.jpg"
+								alt="" style="border: #e2e2e2 solid 1px">
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				<p>
+					We hope that rewards will bring you even closer to your community
+				</p>
+				<h4>- Holly</h4>
+
+
+			</div>
+		</div>
+		<!-- END Section Content -->
+	</section>
+</div>
+<!-- END Story Content -->
+{{/partial}} {{>frontend/base.hbs}}

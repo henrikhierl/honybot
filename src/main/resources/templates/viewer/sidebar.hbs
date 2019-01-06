@@ -1,0 +1,46 @@
+<!-- Sidebar -->
+<nav id="sidebar">
+    <!-- Sidebar Scroll Container -->
+    <div id="sidebar-scroll">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+            <!-- Side Header -->
+            <div class="side-header side-content bg-white-op">
+                <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                    <i class="fa fa-times"></i>
+                </button>
+
+                <a class="h5 text-white" href="/">
+                    <img src="/images/icon.png" width=32 height=32 > <span class="h4 font-w600 sidebar-mini-hide">Honybot</span>
+                </a>
+            </div>
+            <!-- END Side Header -->
+
+            <!-- Side Content -->
+            <div class="side-content">
+                <ul class="nav-main">
+                    <li>
+                        <a href="/streamers/{{name}}" {{#if page_home}}class="active"{{/if}}><i class="fa fa-eye"></i><span class="sidebar-mini-hide">Overview</span></a>
+                    </li>
+                    <li>
+                        <a href="/streamers/{{name}}/rewards" {{#if page_rewards}}class="active"{{/if}}><i class="si si-badge"></i><span class="sidebar-mini-hide">Rewards</span></a>
+                    </li>
+                    <li>
+                        <a href="/streamers/{{name}}/leaderboard" {{#if page_leaderboard}}class="active"{{/if}}><i class="fa fa-list"></i><span class="sidebar-mini-hide">Leaderboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/streamers/{{name}}/vip" {{#if page_vip}}class="active"{{/if}}><i class="fa fa-star"></i><span class="sidebar-mini-hide">VIPs</span></a>
+                    </li>
+                    {{#if settings.showGamesEnabled}}
+                    <li>
+                        <a href="/streamers/{{name}}/sc2" {{#if page_sc}}class="active"{{/if}}><i class="fa fa-gamepad"></i><span class="sidebar-mini-hide">Starcraft 2</span></a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+            <!-- END Side Content -->
+        </div>
+        <!-- Sidebar Content -->
+    </div>
+    <!-- END Sidebar Scroll Container -->
+</nav>

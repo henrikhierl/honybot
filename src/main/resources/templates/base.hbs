@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>{{#block "title"}}HonyBot{{/block}}</title>
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-192x192.png" sizes="192x192">
+
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+    <!-- END Icons -->
+
+
+    <!-- Bootstrap -->
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- PNotify -->
+    <link href="/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+	<!-- SweetAlerts -->
+	<link rel="stylesheet" type="text/css" href="/vendors/sweetalerts/dist/sweetalert.css">
+	
+    <!-- Custom Theme Style -->
+    <link href="/build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        
+        {{> structure/sidebar.hbs}}
+
+        <!-- top navigation -->
+        {{> structure/top-navigation.hbs}}
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+		{{#block "content"}}
+		
+		{{/block}}
+		</div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Honybot by <a href="https://www.twitter.com/Hollysc2">Holly</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+	
+	{{#block "scripts"}}
+    <!-- jQuery -->
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <!-- <script src="/build/js/custom.min.js"></script> breaks navigation -->
+    <!-- jQuery autocomplete -->
+    <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- Switchery -->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
+
+    <!-- PNotify -->
+    <script src="/vendors/pnotify/dist/pnotify.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.buttons.js"></script>
+    <script src="/vendors/pnotify/dist/pnotify.nonblock.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="/build/js/custom.min.js"></script>
+    
+    <!-- SweetAlerts -->
+    <script src="/vendors/sweetalerts/dist/sweetalert.min.js"></script>
+	{{/block}}
+	
+  </body>
+</html>

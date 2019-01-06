@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+h1 {
+	font-family: 'Open Sans';
+	color: rgb(104, 214, 198);
+	text-align: center;
+	margin: 25px 0 -60px;
+}
+a {
+	font-family: 'Open Sans';
+	color: rgb(255, 255, 255);
+	margin: 50px 0 -80px;
+	text-align: center;
+	width: 100%;
+	font-size: 12px;
+	text-decoration: none;
+}
+#wrapper{
+	position: relative;
+	top: 40px;
+	text-align: center
+}
+.center {
+	left: 50%;
+	-webkit-transform: translate( -50% );
+	-ms-transform: translate( -50% );
+	transform: translate( -50% );
+}
+
+/*===== The CSS =====*/
+.progress{
+	width: 200px;
+	height: 240px;
+}
+.progress .track, .progress .fill{
+	fill: rgba(0, 0, 0, 0);
+	stroke-width: 30;
+	transform: translate(290px, 800px)rotate(-120deg);
+}
+.progress .track{
+	stroke: rgb(56, 71, 83);
+}
+.progress .fill {
+	stroke: rgb(255, 255, 255);
+	stroke-linecap: round;
+	stroke-dasharray: 2160;
+	stroke-dashoffset: 2160;
+	transition: stroke-dashoffset 1s;
+}
+.progress.blue .fill {
+	stroke: rgb(104, 214, 198);
+}
+
+.progress.red .fill {
+	stroke: rgb(239, 94, 94);
+}
+
+.progress.green .fill {
+	stroke: rgb(186, 223, 172);
+}
+.progress .value, .progress .text {
+	font-family: 'Open Sans';
+	/*fill: rgb(255, 255, 255);*/
+	fill: rgb(239, 94, 94);
+	text-anchor: middle;
+}
+.progress .value {
+	font-size: 180px;
+}
+.progress .text {
+	font-size: 120px;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		cursor: default;
+}
+
+.color-red{
+	color: rgb(239, 94, 94);
+}
+
+.color-Bronze{
+	color: #ffc500;
+}
+
+.progress.Bronze .fill {
+	stroke: #ffc500;
+}
+
+.color-Silver{
+	color: rgb(239, 94, 94);
+}
+
+.progress.Silver .fill {
+	stroke: rgb(239, 94, 94);
+}
+
+.color-Gold{
+	color: #ff7300;
+}
+
+.progress.Gold .fill {
+	stroke: #ff7300;
+}
+
+.color-Platinum{
+	color: rgb(239, 94, 94);
+}
+
+.progress.Platinum .fill {
+	stroke: rgb(239, 94, 94);
+}
+
+.color-Diamond{
+	color: rgb(239, 94, 94);
+}
+
+.progress.Diamond .fill {
+	stroke: rgb(239, 94, 94);
+}
+
+.color-Master{
+	color: rgb(239, 94, 94);
+}
+
+.progress.Master .fill {
+	stroke: rgb(239, 94, 94);
+}
+
+.color-Grandmaster{
+	color: #ffc500;
+}
+
+.progress.Grandmaster .fill {
+	stroke: #ffc500;
+}
+
+
+
+
+
+
+

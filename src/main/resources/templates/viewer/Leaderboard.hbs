@@ -1,0 +1,122 @@
+{{#partial "stylesheets"}}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="/assets/css/oneui.css">
+     <link rel="stylesheet" type="text/css" href="/css/custom.css">
+{{/partial}}
+
+{{#partial "javascript"}}
+        <script src="/assets/js/core/jquery.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="/assets/js/core/jquery.appear.min.js"></script>
+        <script src="/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="/assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="/assets/js/core/js.cookie.min.js"></script>
+        <script src="/assets/js/app.js"></script>
+{{/partial}}
+
+{{#partial "content"}}
+<!-- Page Header -->
+<div class="content bg-image" 
+	{{#if banner}}
+		style="background-image: url('{{banner}}');
+		">
+	{{else}}
+		style="background-image: url('https://web-cdn.ttvnw.net/images/xarth/bg_glitch_pattern.png');
+		background-size: auto;">
+	{{/if}}
+    <div class="push-50-t push-15 clearfix">
+        <div class="push-15-r pull-left">
+            <img class="img-avatar img-avatar-thumb" src="{{logo}}" alt="">
+        </div>
+        <h1 class="h2 text-white push-5-t">{{name}}</h1>
+        <h2 class="h5 text-white-op"><a class="text-white" href="https://www.twitch.tv/{{name}}">twitch.tv/{{name}}</a></h2>
+    </div>
+</div>
+
+
+<!-- END Page Header -->
+
+ <!-- Stats -->
+ <div class="content bg-white border-b">
+     <div class="row items-push text-uppercase text-center">
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="font-w700 text-gray-darker animated fadeIn">Total {{pointsname}}</div>
+             <span class="h2 font-w300 text-primary animated flipInX">{{total.points}}</span>
+         </div>
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="font-w700 text-gray-darker animated fadeIn">Total Hours Watched</div>
+             <span class="h2 font-w300 text-primary animated flipInX">{{total.time}}</span>
+         </div>
+         <div class="col-xs-12 col-sm-4 col-md-4">
+             <div class="font-w700 text-gray-darker animated fadeIn">Viewers Counted</div>
+             <span class="h2 font-w300 text-primary animated flipInX">{{total.viewers}}</span>
+         </div>
+     </div>
+     <div class="row items-push text-uppercase text-center">
+     </div>
+
+ </div>
+ <!-- END Stats -->
+
+ <!-- Page Content -->
+ <div class="content content-boxed">
+   <!-- Header BG Table -->
+   <div class="block">
+       <div class="block-content">
+           <table class="table table-borderless table-header-bg">
+               <thead>
+                   <tr>
+                       <th style="width: 10%;"></th>
+                       <th class="text-center" style="width: 30%;">Name</th>
+                       <th class="text-center"  style="width: 30%;">{{pointsname}}</th>
+                       <th class="text-center hidden-xs"  style="width: 30%;">VIP</th>
+                   </tr>
+               </thead>
+               <tbody>
+               {{#each users}}
+                   <tr>
+                       <td>{{index}}</td>
+                       <td class="text-center"><a href="/streamers/{{name}}?q={{username}}">{{username}}</a></td>
+                       <td class="text-center">
+                           <span>{{points}}</span>
+                       </td>
+                       <td class="text-center hidden-xs">
+                           <span>{{vip_name}}</span>
+                       </td>
+                   </tr>
+               {{/each}}
+               </tbody>
+           </table>
+           {{#if pagination}}
+           <div class="row text-center">
+             <div class="paging_simple_numbers" id="DataTables_Table_1_paginate">
+               <ul class="pagination">
+                 <li class="paginate_button previous {{# if pagination.back.enabled}}{{else}}disabled{{/if}}" aria-controls="DataTables_Table_1" tabindex="0" id="DataTables_Table_1_previous">
+                   <a href="/streamers/{{name}}/leaderboard?p={{pagination.back.url}}"><i class="fa fa-angle-left"></i></a>
+                 </li>
+                 {{#each pagination.pages}}
+                 <li class="paginate_button {{#if active}}active{{/if}} {{#if enabled}}{{else}}disabled{{/if}}" aria-controls="DataTables_Table_1" tabindex="0">
+                   <a href="/streamers/{{name}}/leaderboard?p={{value}}">{{value}}</a>
+                 </li>
+                 {{/each}}
+                 <li class="paginate_button next {{# if pagination.next.enabled}}{{else}}disabled{{/if}}"  aria-controls="DataTables_Table_1" tabindex="0" id="DataTables_Table_1_next">
+                   <a href="/streamers/{{name}}/leaderboard?p={{pagination.next.url}}"><i class="fa fa-angle-right"></i></a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           {{/if}}
+           
+       </div>
+   </div>
+   <!-- END Header BG Table -->
+ </div>
+ <!-- END Page Content -->
+{{/partial}}
+
+{{> viewer/base.hbs}}
+

@@ -1,0 +1,10 @@
+/bin
+/build
+*.class
+.settings
+.project
+.idea
+/out
+._*
+botsToRestart.txt
+config.properties

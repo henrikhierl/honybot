@@ -1,0 +1,194 @@
+{{#partial "stylesheets"}}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+
+        <!-- Bootstrap and OneUI CSS framework -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="/assets/css/oneui.css">
+     <link rel="stylesheet" type="text/css" href="/css/custom.css">
+{{/partial}}
+
+{{#partial "javascript"}}
+        <script src="/assets/js/core/jquery.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="/assets/js/core/jquery.appear.min.js"></script>
+        <script src="/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="/assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="/assets/js/core/js.cookie.min.js"></script>
+        <script src="/assets/js/app.js"></script>
+{{/partial}}
+
+{{#partial "content"}}
+
+<!-- Page Header -->
+<div class="content bg-image" 
+	{{#if banner}}
+		style="background-image: url('{{banner}}');
+		">
+	{{else}}
+		style="background-image: url('https://web-cdn.ttvnw.net/images/xarth/bg_glitch_pattern.png');
+		background-size: auto;">
+	{{/if}}
+    <div class="push-50-t push-15 clearfix">
+        <div class="push-15-r pull-left">
+            <img class="img-avatar img-avatar-thumb" src="{{logo}}" alt="">
+        </div>
+        <h1 class="h2 text-white push-5-t">{{name}}</h1>
+        <h2 class="h5 text-white-op"><a class="text-white" href="https://www.twitch.tv/{{name}}">twitch.tv/{{name}}</a></h2>
+    </div>
+</div>
+
+
+<!-- END Page Header -->
+
+<!-- Stats -->
+<div class="content bg-white border-b">
+    <div class="row items-push text-uppercase text-center">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">Total {{pointsname}}</div>
+            <span class="h2 font-w300 text-primary animated flipInX">{{total.points}}</span>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">Total Hours Watched</div>
+            <span class="h2 font-w300 text-primary animated flipInX">{{total.time}}</span>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">Bets Won/Total</div>
+            <span class="h2 font-w300 text-primary animated flipInX">{{total.bets}}</span>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">Total {{pointsname}} Won</div>
+            <span class="h2 font-w300 text-primary animated flipInX">{{total.points-won}}</span>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">Total {{pointsname}} Lost</div>
+            <span class="h2 font-w300 text-primary animated flipInX">{{total.points-lost}}</span>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="font-w700 text-gray-darker animated fadeIn">Total {{pointsname}} Bet</div>
+            <span class="h2 font-w300 text-primary animated flipInX">{{total.points-bet}}</span>
+        </div>
+    </div>
+    <div class="row items-push text-uppercase text-center">
+    </div>
+
+</div>
+<!-- END Stats -->
+
+<!-- Page Content -->
+<div class="content content-boxed">
+  {{#if viewer}}
+	  <!-- Viewer -->
+	  <div class="block block-bordered">
+	      <div class="block-content">
+	        <!-- Basic Info -->
+	        <div class="block-content text-center overflow-hidden">
+	            <h2 class="h2 font-w600 push-5 animated fadeInDown">
+	                {{viewer.username}}
+	            </h2>
+	            <div class="push-30-t push animated fadeInDown">
+	            	{{#if viewer.logo}}
+	                <img class="img-avatar" src="{{viewer.logo}}" alt="">
+	                {{else}}
+	                <div class="push-30-t push animated fadeInDown">
+		              <span class="fa-stack fa-5x">
+		                <i class="fa fa-user fa-stack-1x"></i>
+		                <i class="fa fa-ban fa-stack-2x text-primary"></i>
+		                </span>
+		            </div>
+	                {{/if}}
+	            </div>
+	            <div class="push-30 animated fadeInUp">
+	                {{#if viewer.vip}}<h3 class="h3 text-muted">{{viewer.vip_name}}</h3>{{/if}}
+	                <h5 class="h5 text-muted">You get {{viewer.points-get}} {{pointsname}} every {{viewer.points-time}} Minutes while watching {{name}}</h5>
+	            </div>
+	        </div>
+	        <!-- END Basic Info -->
+	          <div class="pull-r-l pull-t push">
+	              <table class="block-table text-center bg-gray-lighter border-b">
+	                  <tbody>
+	                      <tr>
+	                          <td class="border-r" style="width: 50%;">
+	                              <div class="h1 font-w700">{{viewer.points}}</div>
+	                              <div class="h3 text-muted text-uppercase push-5-t">{{pointsname}}</div>
+	                          </td>
+	                          <td class="border-r" style="width: 50%;">
+	                              <div class="h1 font-w700">{{viewer.time}}</div>
+	                              <div class="h5 text-muted text-uppercase push-5-t">Hours watched</div>
+	                          </td>
+	                      </tr>
+	                  </tbody>
+	              </table>
+	          </div>
+	          {{#if viewer.vip}}
+	          	<div class="row items-push text-center text-uppercase">
+	              <div class="col-xs-6 col-sm-3">
+	                  <div class="font-w700 text-gray-darker animated fadeIn">Bets Won/Total</div>
+	                  <span class="h2 font-w300 animated flipInX">{{viewer.bets}}</span>
+	              </div>
+	              <div class="col-xs-6 col-sm-3">
+	                  <div class="font-w700 text-gray-darker animated fadeIn">{{pointsname}} Won</div>
+	                  <span class="h2 font-w300 animated flipInX">{{viewer.points-won}}</span>
+	              </div>
+	              <div class="col-xs-6 col-sm-3">
+	                  <div class="font-w700 text-gray-darker animated fadeIn">{{pointsname}} Lost</div>
+	                  <span class="h2 font-w300 animated flipInX">{{viewer.points-lost}}</span>
+	              </div>
+	              <div class="col-xs-6 col-sm-3">
+	                  <div class="font-w700 text-gray-darker animated fadeIn">{{pointsname}} Bet</div>
+	                  <span class="h2 font-w300 animated flipInX">{{viewer.points-bet}}</span>
+	              </div>
+	          	</div>
+	          {{else}}
+	          	<div class="row items-push text-center text-uppercase">
+		          <div class="col-xs-12 col-sm-12">
+		            <h3 class="h3 text-danger">Become VIP to see your betting Stats</h3>
+		          </div>
+        	    </div>
+	          {{/if}}
+	      </div>
+	  </div>
+	<!-- END Viewer -->
+  {{else}}
+  		<!-- Viewer None -->
+	  <div class="block block-bordered">
+	      <div class="block-content">
+	        <!-- Basic Info -->
+	        <div class="block-content text-center overflow-hidden">
+	            <div class="push-30-t pushn">
+	              <span class="fa-stack fa-5x">
+	                <i class="fa fa-user fa-stack-1x"></i>
+	                <i class="fa fa-ban fa-stack-2x text-primary"></i>
+	                </span>
+	            </div>
+	            <div class="push-30">
+	                <h3 class="h3 text-muted">No User Found</h3>
+	                  <!-- Searchbar -->
+	                  <div class="col-lg-6 col-lg-offset-3">
+	                    <div class="block">
+	                        <div class="block-content">
+	                          <form name="myform" class="form-horizontal" action="" method="get">
+	                              <div class="form-material form-material-primary input-group">
+	                                  <input class="form-control" type="text" id="base-material-text" name="q" placeholder="Search User">
+	                                  <span class="input-group-addon" onclick="myform.submit()"><i class="si si-magnifier"></i></span>
+	                              </div>
+	                          </form>
+	                        </div>
+	                    </div>
+	                  </div>
+	                  <!-- END Searchbar -->
+	            </div>
+	        </div>
+	        <!-- END Basic Info -->
+	      </div>
+	  </div>
+  	  <!-- END Viewer None -->
+  {{/if}}
+  
+
+</div>
+
+{{/partial}}
+
+{{> viewer/base.hbs}}

@@ -1,0 +1,20 @@
+# Admin password to log into any account as admin. For the love of god, please change this
+adminPassword=password
+
+# Webserver Port
+port=4567
+
+# twitch config
+twitchOauth=
+twitchClientId=
+twitchClientSecret=
+twitchCommunityId=
+twitchOauthToken=
+twitchLoginRedirectURI=
+
+#db config - this are only defaualt values. You should change this to your db settings
+dbHost=localhost
+dbPort=3306
+dbName=honybot
+dbUser=honybot
+dbPassword=password
