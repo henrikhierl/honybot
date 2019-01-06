@@ -71,7 +71,7 @@ dbPassword=password
 This bot uses code from other repos, that I don't have added to GitHub yet. They will follow soon.
 
 - HonyHelper
-- Honybot React Frontend
+- [Honybot React Panel](https://github.com/Honydev/honybot_react_panel)
 - Starcraft 2 Ladder Updater
 
 ## Problems
