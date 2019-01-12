@@ -52,6 +52,7 @@ adminPassword=password
 port=4567
 
 # twitch config
+twitchChatBotName=
 twitchOauth=
 twitchClientId=
 twitchClientSecret=
