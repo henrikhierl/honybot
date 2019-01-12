@@ -13,7 +13,7 @@ a lot of dependencies in locations (e.g. in html) that reference to static sourc
 For example some images, JavaScript or the HonyHelper might still be loaded from https://static.honybot.com
 
 ## Requirements to run
-- MySQL Database
+- MySQL Database (recommended version 5.7)
 - Twitch.tv developer access
 - SC2 Ladder Updater (optional)
 
@@ -25,6 +25,13 @@ to create some db entries, like a dummy user for betting stats.
 
 Rename or copy `config.properties.dist` file to `config.properties` and fill it out.
 More information can be found down below.
+
+Register an App at https://glass.twitch.tv/console/apps and generate the ClientSecret. 
+Your app's OAuth Redirect URL need to be the same as the one in the configuration file, E.g. `http://localhost:4567/auth`.
+Past the ClientSecret and Client-ID into the `config.properties`
+
+The chatbot needs a Twitch account and a oauthtoken therfore you need to ganerate one and save it togather withe the name
+into config.properties`. 
 
 Import project into IDE:
 - IntellIJ IDEA: New project from existing source > use Gradle
@@ -52,12 +59,12 @@ adminPassword=password
 port=4567
 
 # twitch config
-twitchOauth=
-twitchClientId=
-twitchClientSecret=
+twitchOauth=oauth:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+twitchClientId=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+twitchClientSecret=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 twitchCommunityId=
-twitchOauthToken=
-twitchLoginRedirectURI=
+twitchOauthToken=oauth:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+twitchLoginRedirectURI=http://XXXX:PORT/auth
 
 #db config - this are only defaualt values. You can change this to your db settings
 dbHost=localhost
