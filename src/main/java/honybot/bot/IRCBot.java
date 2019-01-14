@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 import org.jibble.pircbot.PircBot;
 
+import honybot.config.ConfigManager;
 import honybot.bot.Event.ChannelMessageEvent;
 import honybot.bot.dao.impl.SQLViewerUserDao;
 import honybot.bot.listener.BetCommandListener;
@@ -27,7 +28,7 @@ public class IRCBot extends PircBot {
 	public IRCBot(String username, MessageHandler mHandler){
 		this.username = username;
 		settings = new Settings(username, this);
-		this.setName("Honybot");
+		this.setName(ConfigManager.getTwitchOauth());
 		listeners = new LinkedList<>();
 		this.mHandler = mHandler;
 	}

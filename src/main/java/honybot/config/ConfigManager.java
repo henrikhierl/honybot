@@ -13,11 +13,12 @@ public class ConfigManager {
 	private static int port = 4567;
 	
 	// Twitch
+        private static String twitchChatBotName = "";
 	private static String twitchOauth = "";
 	private static String twitchClientId = "";
 	private static String twitchClientSecret = "";
 	private static String twitchCommunityId = "";
-    private static String twitchOauthToken = "";
+        private static String twitchOauthToken = "";
 	private static String twitchLoginRedirectURI = "";
 
 	// twitch constant config
@@ -40,6 +41,7 @@ public class ConfigManager {
 		ConfigManager.loadAdminPassword(configProps);
 		ConfigManager.loadPort(configProps);
 		
+                ConfigManager.loadTwitchChatBotName(configProps);
 		ConfigManager.loadTwitchOauth(configProps);
 		ConfigManager.loadTwitchClientId(configProps);
 		ConfigManager.loadTwitchClientSecret(configProps);
@@ -64,6 +66,10 @@ public class ConfigManager {
 		return port;
 	}
 
+        public static String getTwitchChatBotName() { 
+                return twitchChatBotName;
+        }
+        
 	public static String getTwitchOauth() {
 		return twitchOauth;
 	}
@@ -135,6 +141,13 @@ public class ConfigManager {
 			} else {
 				ConfigManager.port = port;
 			}
+		}
+	}
+        
+        private static void loadTwitchChatBotName(Properties configProps) {
+		twitchChatBotName = configProps.getProperty("twitchChatBotName", "");
+		if (StringUtils.isEmptyOrWhitespaceOnly(twitchChatBotName)) {
+			System.out.println("WARNING: twitchOauth is empty.");
 		}
 	}
 	
