@@ -26,12 +26,12 @@ to create some db entries, like a dummy user for betting stats.
 Rename or copy `config.properties.dist` file to `config.properties` and fill it out.
 More information can be found down below.
 
-Register an App at https://glass.twitch.tv/console/apps and generate the ClientSecret. 
-Your app's OAuth Redirect URL need to be the same as the one in the configuration file, E.g. `http://localhost:4567/auth`.
-Past the ClientSecret and Client-ID into the `config.properties`
+Register an app at https://glass.twitch.tv/console/apps and generate the ClientSecret. 
+Your app's OAuth Redirect URL needs to be the same as the one in the configuration file, e.g. `http://localhost:4567/auth`.
+Paste the ClientSecret and Client-ID into the `config.properties`
 
-The chatbot needs a Twitch account and a oauthtoken therfore you need to ganerate one and save it togather withe the name
-into config.properties`. 
+The Chatbot needs a twitch dedicated account and an OAuth token, to join chat channels. Therefore you need to generate
+one and save it together with the name into `config.properties`. 
 
 Import project into IDE:
 - IntellIJ IDEA: New project from existing source > use Gradle
@@ -100,7 +100,7 @@ It would be cool to have an own, unique design.
 - **Cleaner code in general**
 
 # License
-This Repository is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, as stated in the LICENSE file.
+This repository is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, as stated in the LICENSE file.
 
 Files in `/src/main/resources/assets` are licensed under the Themeforest Regular License
 (https://themeforest.net/licenses/terms/regular), unless stated otherwise.
