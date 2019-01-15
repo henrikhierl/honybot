@@ -119,7 +119,7 @@ public class PointCommandListener implements ChatEventListener{
 									catchCount++;
 									nickName = catchList.get(i).getName();
 									SQLViewerUserDao.changePoints(name, nickName, giveAmount);
-									winningUsers += nickName + "(" + giveAmount + ") ";
+									winningUsers += nickName + " (" + giveAmount + ") ";
 									if(i < catchList.size()-1){
 											winningUsers += ", ";								
 									}
