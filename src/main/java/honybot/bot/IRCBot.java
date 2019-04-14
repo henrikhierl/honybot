@@ -49,8 +49,8 @@ public class IRCBot extends PircBot {
 			}
 
 			if (tagArray[0].startsWith("@")) {
-				tagArray[0] = tagArray[0].substring(8);
-				String[] badgesArray = tagArray[0].split(",");
+				tagArray[1] = tagArray[1].substring(7);
+				String[] badgesArray = tagArray[1].split(",");
 
 				for (int i = 0; i < badgesArray.length; i++) {
 					if (badgesArray[i].equalsIgnoreCase("broadcaster/1")
